@@ -1,0 +1,19 @@
+.nav {
+    & ul {
+        display: flex;
+    } 
+
+    & li {
+        list-style: none;
+        
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__item {
+        color: white;
+        text-decoration: none;
+        padding-left: 25px;
+    }
+}

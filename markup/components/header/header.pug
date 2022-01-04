@@ -1,0 +1,16 @@
+mixin header(data)
+    .header
+        .container
+            .row
+                .col-1
+                    .header__logo-heart
+                        img(src="", alt="")
+                .col-2
+                    .header__logo-text
+                        img(src="", alt="")
+                .col-6
+                    .header__nav
+                        +nav()
+                .col-3
+                    .header__search
+                        +field-search()
