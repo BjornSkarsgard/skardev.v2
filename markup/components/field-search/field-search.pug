@@ -1,6 +1,7 @@
 mixin field-search(data)
     .field-search
         form(action="GET")
-            input(type="text", placeholder="Что то потерял? Все найдется!").filed-search__input
+            input(type="text", placeholder="Что то потерял? Все найдется!").field-search__input
             input(type="submit")
-            span.filed-search__icon
+            span.field-search__icon
+                +svg('search', 25, 25)

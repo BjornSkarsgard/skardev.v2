@@ -1,4 +1,144 @@
 
 .header {
+    position: relative;
     background-color: $main-color;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        box-shadow: 0 0 40px #000;
+        pointer-events: none;
+    }
+
+    &__logo-heart {
+        display: flex;
+        width: 100px;
+        height: 45px;
+        position: relative;
+        transition: height .2s ease;
+
+        &:hover {
+            .header__logo--hover {
+                opacity: 1;
+                transition: opacity .1s ease-in;
+            }
+        }
+
+        .header__logo--hover {
+            opacity: 0;
+            transition: opacity .1s ease-in;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        height: 100%;
+        max-width: 100px;
+        max-height: 45px;
+        object-fit: contain;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        
+    }
+
+    &__title {
+        display: flex;
+        height: 100%;
+        position: relative;
+        justify-content: center;
+        transition: all .2s ease;
+
+        &-logo {
+            font-size: 30px;
+            text-transform: uppercase;
+            color: white;
+            transition: all .2s ease;
+
+            &--skar {
+                // margin: 5px 0 0;
+                margin-top: 5px;
+                margin-bottom: 31px;
+                transition: all .2s ease;
+            }
+
+            &--d {
+                margin: -10px 0 0;
+                font-size: 70px;
+                color: $blue-neon;
+                text-shadow: 
+                0 0 5px $blue-neon, 
+                0 0 10px $blue-neon, 
+                0 0 15px $blue-neon;
+
+                animation: skarsgard forwards 10s alternate-reverse cubic-bezier(.47,-.44,.49,1.46) infinite;
+            }
+
+            &--ev {
+                margin-top: auto;
+                margin-bottom: 10px;
+            }
+        }
+
+    }
 }
+
+.header--scroll {
+    & .header__logo-heart {
+        height: 30px;
+    }
+
+
+    & .header__title {
+        align-items: center;
+        transition: all .2s ease;
+
+        &-logo {
+            font-size: 30px;
+            margin-top: auto;
+            margin-bottom: auto;
+            transition: all .2s ease;
+            &--skar {
+                margin-top: 0;
+                margin-bottom: 0;
+                transition: all .2s ease;
+            }
+            &--d {
+                margin-left: 2px;
+                margin-right: 2px;
+            }
+        }
+    }
+}
+
+@keyframes skarsgard {
+    0% {
+        color: $blue-neon;
+        text-shadow: 
+        0 0 5px $blue-neon, 
+        0 0 10px $blue-neon, 
+        0 0 15px $blue-neon;
+    }
+
+    50% {
+        color: $pink-neon;
+        text-shadow: 
+        0 0 5px $pink-neon, 
+        0 0 10px $pink-neon, 
+        0 0 15px $pink-neon;
+    }
+
+    100% {
+        color: $blue-neon;
+        text-shadow: 
+        0 0 5px $blue-neon, 
+        0 0 10px $blue-neon, 
+        0 0 15px $blue-neon;
+    }
+}   
