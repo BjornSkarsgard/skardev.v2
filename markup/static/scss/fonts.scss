@@ -16,3 +16,45 @@
 // Var for using custom font
 $CustomFont: 'CustomFont', Helvetica, Arial, sans-serif;
 */
+
+$ManropeFont: 'Manrope', Helvetica, Arial, sans-serif;
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Bold.eot');
+    src: url('../fonts/Manrope-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Manrope-Bold.woff') format('woff'),
+         url('../fonts/Manrope-Bold.woff2') format('woff2');
+    font-weight: 700;  
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Medium.eot');
+    src: url('../fonts/Manrope-Medium.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Manrope-Medium.woff') format('woff'),
+            url('../fonts/Manrope-Medium.woff2') format('woff2');
+    font-weight: 500;  
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Regular.eot');
+    src: url('../fonts/Manrope-Regular.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Manrope-Regular.woff') format('woff'),
+            url('../fonts/Manrope-Regular.woff2') format('woff2');
+    font-weight: 400;  
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Light.eot');
+    src: url('../fonts/Manrope-Light.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Manrope-Light.woff') format('woff'),
+            url('../fonts/Manrope-Light.woff2') format('woff2');
+    font-weight: 200;  
+    font-style: normal;
+    }

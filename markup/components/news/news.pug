@@ -1,0 +1,14 @@
+mixin news(data)
+    .news
+        .row
+            .col-12
+                .news__container
+                    .row.align-items-center
+                        .col-2.offset-1
+                            h1.news__title Новое на сайте
+                        .col-1
+                            span.news__sorting -->
+                    .row
+                        .col-10.offset-1
+                            +news-card()
+                    

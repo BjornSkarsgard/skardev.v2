@@ -1,5 +1,5 @@
 import $ from "jquery";
-$('body').click( function() {
+$('.header__title').click( function() {
     if($('.header').hasClass('header--scroll')) {
         $('.header').removeClass('header--scroll')
     }

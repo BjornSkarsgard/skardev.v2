@@ -2,19 +2,30 @@ doctype html
 html(class="no-js", lang="ru")
 
     include ../components/head/head.pug
-    include ../components/footer/footer.pug
-    include ../components/svg/svg.pug
     include ../components/header/header.pug
+    include ../components/svg/svg.pug
     include ../components/nav/nav.pug
     include ../components/field-search/field-search.pug
+    include ../components/news/news.pug
+    include ../components/news-card/news-card.pug
+    include ../components/footer/footer.pug
 
     head
         +head(head.defaults)
     body.page
         |%=symbols=%
-
-        section.page__wrapper
-            +header()
+        header
+            section.section
+                +header()
+        main
+            .container
+                .row
+                    .col-9
+                        section.section
+                            +news()
+                    .col-2
+                        section adas
+        footer
             
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
